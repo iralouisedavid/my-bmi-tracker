@@ -19,3 +19,8 @@
 * Utilized AnimatedBuilder to rebuild the ListView only when the ValueNotifier is changed, boosting performance and reducing needless rebuilds.
 * Modified the _loadResults() function to update the ValueNotifier instead of calling setState(), improving separation of concerns and reducing unnecessary rebuilds.
 * Enhanced code readability and maintainability by adding more comments.
+
+## Version 1.3.0 - 2023-03-22
+* Added a Clear button to the BMI Calculator screen that allows users to easily clear the values in the height, weight, and age text boxes, without having to manually delete the input.
+* The Clear button is positioned next to the Calculate button for easy access and is designed to stretch to the width of the screen to improve usability.
+* Fixed minor bugs and improved app performance.

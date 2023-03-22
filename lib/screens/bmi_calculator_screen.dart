@@ -84,19 +84,36 @@ class _BMICalculatorScreenState extends State<BMICalculatorScreen> {
               validator: validateAge,
             ),
             const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                if (_formKey.currentState!.validate()) {
-                  BMICalculator bmiCalculator = BMICalculator(
-                    weight: double.parse(_weightController.text),
-                    height: double.parse(_heightController.text),
-                    //age: int.parse(_ageController.text),
-                    age: _ageValueNotifier.value, // Use the value from ValueNotifier
-                  );
-                  bmiCalculator.displayBMIResult(context);// Call displayBMIResult method here
-                }
-              },
-              child: const Text('Calculate BMI'),
+            Row(
+              children: [
+                Expanded(child:
+                  ElevatedButton(
+                    onPressed: () {
+                      if (_formKey.currentState!.validate()) {
+                        BMICalculator bmiCalculator = BMICalculator(
+                          weight: double.parse(_weightController.text),
+                          height: double.parse(_heightController.text),
+                          //age: int.parse(_ageController.text),
+                          age: _ageValueNotifier.value, // Use the value from ValueNotifier
+                        );
+                        bmiCalculator.displayBMIResult(context); // Call displayBMIResult method here
+                      }
+                    },
+                    child: const Text('Calculate'),
+                  ),
+                ),
+                const SizedBox(width: 10),
+                Expanded(child:
+                  ElevatedButton(
+                    onPressed: () {
+                      _weightController.clear();
+                      _heightController.clear();
+                      _ageController.clear();
+                    },
+                    child: const Text('Clear'),
+                  ),
+                ),
+              ],
             ),
             const SizedBox(height: 20),
             ElevatedButton(

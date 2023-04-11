@@ -28,6 +28,11 @@ class BMICalculator extends ChangeNotifier {
     status = getBMIStatus();
   }
 
+  // Get the BMI value
+  double getBMI() {
+    return _bmi;
+  }
+
   // Get the BMI result (status)
   String getBMIStatus() {
     if (_bmi >= 25) {

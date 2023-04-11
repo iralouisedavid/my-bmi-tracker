@@ -24,3 +24,8 @@
 * Added a Clear button to the BMI Calculator screen that allows users to easily clear the values in the height, weight, and age text boxes, without having to manually delete the input.
 * The Clear button is positioned next to the Calculate button for easy access and is designed to stretch to the width of the screen to improve usability.
 * Fixed minor bugs and improved app performance.
+
+## Version 1.4.0 - 2023-04-11
+* Added unit testing for BMI calculation
+* Added unit testing for the CRUD operations of the BMI database using mock SQFlite database
+* Added unit testing for BMI validators
